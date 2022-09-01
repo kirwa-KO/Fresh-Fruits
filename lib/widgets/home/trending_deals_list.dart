@@ -51,7 +51,6 @@ class TrendingDealsList extends StatelessWidget {
             itemCount: deals.length,
           ),
         ),
-        const SizedBox(height: 28),
       ],
     );
   }
