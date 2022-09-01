@@ -79,6 +79,14 @@ flutter:
     - assets/images/deals/deal2.png
     - assets/images/deals/deal3.png
     - assets/images/deals/deal4.png
+    - assets/images/categories/list/category1.png
+    - assets/images/categories/list/category2.png
+    - assets/images/categories/list/category3.png
+    - assets/images/categories/list/category4.png
+    - assets/images/categories/list/category5.png
+    - assets/images/categories/list/category6.png
+    - assets/images/categories/list/category7.png
+    - assets/images/categories/list/category8.png
     
   #   - images/a_dot_ham.jpeg
 
