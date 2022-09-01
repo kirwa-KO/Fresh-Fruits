@@ -69,6 +69,17 @@ flutter:
     - assets/images/onboarding/step3.png
     - assets/images/auth/create-account.png
     - assets/images/auth/sign-in.png
+    - assets/images/receipes/receipe1.png
+    - assets/images/receipes/receipe2.png
+    - assets/images/categories/category1.png
+    - assets/images/categories/category2.png
+    - assets/images/categories/category3.png
+    - assets/images/categories/category4.png
+    - assets/images/deals/deal1.png
+    - assets/images/deals/deal2.png
+    - assets/images/deals/deal3.png
+    - assets/images/deals/deal4.png
+    
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

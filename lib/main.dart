@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:freshfruits/screens/auth/create_account.dart';
 import 'package:freshfruits/screens/auth/sign_in.dart';
+import 'package:freshfruits/screens/home_screen.dart';
 import 'package:freshfruits/screens/onboarding/onboarding_first.dart';
 import 'package:freshfruits/screens/onboarding/onboarding_fourth.dart';
 import 'package:freshfruits/screens/onboarding/onboarding_second.dart';
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
       title: 'Fresh Fruits',
       theme: ThemeData(
         fontFamily: "Poppins",
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.orange,
         primaryColor: HexColor("#E67F1E"),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
@@ -43,6 +44,11 @@ class MyApp extends StatelessWidget {
             color: Colors.black,
             fontWeight: FontWeight.w600,
           ),
+          headline2: TextStyle(
+            fontSize: 18,
+            color: Colors.black,
+            fontWeight: FontWeight.w600,
+          ),
         ),
         inputDecorationTheme: InputDecorationTheme(
           enabledBorder: OutlineInputBorder(
@@ -60,7 +66,7 @@ class MyApp extends StatelessWidget {
         textSelectionTheme:
             TextSelectionThemeData(cursorColor: HexColor("#E67F1E")),
       ),
-      home: const SignIn(),
+      home: const HomeScreen(),
       routes: {
         OnboardingFirst.routeName: (ctx) => const OnboardingFirst(),
         OnboardingSecond.routeName: (ctx) => const OnboardingSecond(),
@@ -68,6 +74,7 @@ class MyApp extends StatelessWidget {
         OnboardingFourth.routeName: (ctx) => const OnboardingFourth(),
         CreateAccount.routeName: (ctx) => const CreateAccount(),
         SignIn.routeName: (ctx) => const SignIn(),
+        HomeScreen.routeName: (ctx) => const HomeScreen(),
       },
     );
   }
