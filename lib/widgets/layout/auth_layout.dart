@@ -9,8 +9,12 @@ class AuthLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-          image:
-              DecorationImage(image: AssetImage(imageBg), fit: BoxFit.cover)),
+          image: DecorationImage(
+        image: AssetImage(imageBg),
+        fit: BoxFit.contain,
+        alignment: Alignment.topLeft
+      ),
+      ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [

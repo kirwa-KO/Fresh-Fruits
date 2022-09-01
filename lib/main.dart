@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:freshfruits/screens/auth/create_account.dart';
+import 'package:freshfruits/screens/auth/sign_in.dart';
 import 'package:freshfruits/screens/onboarding/onboarding_first.dart';
 import 'package:freshfruits/screens/onboarding/onboarding_fourth.dart';
 import 'package:freshfruits/screens/onboarding/onboarding_second.dart';
@@ -41,7 +42,6 @@ class MyApp extends StatelessWidget {
             fontSize: 20,
             color: Colors.black,
             fontWeight: FontWeight.w600,
-            // backgroundColor: Colors.red
           ),
         ),
         inputDecorationTheme: InputDecorationTheme(
@@ -60,13 +60,14 @@ class MyApp extends StatelessWidget {
         textSelectionTheme:
             TextSelectionThemeData(cursorColor: HexColor("#E67F1E")),
       ),
-      home: const CreateAccount(),
+      home: const SignIn(),
       routes: {
         OnboardingFirst.routeName: (ctx) => const OnboardingFirst(),
         OnboardingSecond.routeName: (ctx) => const OnboardingSecond(),
         OnboardingThird.routeName: (ctx) => const OnboardingThird(),
         OnboardingFourth.routeName: (ctx) => const OnboardingFourth(),
         CreateAccount.routeName: (ctx) => const CreateAccount(),
+        SignIn.routeName: (ctx) => const SignIn(),
       },
     );
   }

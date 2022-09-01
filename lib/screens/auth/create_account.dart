@@ -59,11 +59,11 @@ class _CreateAccountState extends State<CreateAccount> {
                   shouldLoop:
                       false, // start again as soon as the animation is finished
                   colors: const [
-                    Colors.green,
-                    Colors.blue,
-                    Colors.pink,
-                    Colors.orange,
-                    Colors.purple
+                    Color.fromRGBO(88, 165, 92, 1),
+                    Color.fromRGBO(81, 134, 242, 1),
+                    Color.fromRGBO(217, 80, 63, 1),
+                    Color.fromRGBO(241, 189, 66, 1),
+                    Color.fromRGBO(122, 30, 118, 1)
                   ], // manually specify the colors to be used
                   createParticlePath: drawStar, // define a custom shape/path.
                 ),
@@ -96,6 +96,7 @@ class _CreateAccountState extends State<CreateAccount> {
       path.lineTo(halfWidth + internalRadius * cos(step + halfDegreesPerStep),
           halfWidth + internalRadius * sin(step + halfDegreesPerStep));
     }
+    
     path.close();
     return path;
   }
