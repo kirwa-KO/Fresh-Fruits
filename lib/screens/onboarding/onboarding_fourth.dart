@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:freshfruits/widgets/Onboarding/step_content.dart';
-import 'package:freshfruits/widgets/ui/buttons/long_button.dart';
+import 'package:freshfruits/widgets/ui/buttons/long_black_button.dart';
+import 'package:freshfruits/widgets/ui/buttons/long_outline_black_button.dart';
 
 class OnboardingFourth extends StatelessWidget {
   static const String routeName = "/onboarding_fourth";
@@ -24,7 +25,9 @@ class OnboardingFourth extends StatelessWidget {
                   description:
                       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"),
               const SizedBox(height: 40),
-              const LongButton(label: "NEXT"),
+              const LongBlackButton(label: "Create an account"),
+              const SizedBox(height: 16),
+              const LongOutlineBlackButton(label: "Login"),
               const SizedBox(height: 40)
             ],
           )),

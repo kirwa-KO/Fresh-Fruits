@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import 'package:hexcolor/hexcolor.dart';
 
 class OnboardingFirst extends StatelessWidget {
   static const String routeName = "/onboarding_first";
@@ -8,7 +9,7 @@ class OnboardingFirst extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Theme.of(context).primaryColor,
+      backgroundColor: HexColor("#FEC54B"),
       body: Container(
         width: double.infinity,
         padding: const EdgeInsets.only(bottom: 40),
