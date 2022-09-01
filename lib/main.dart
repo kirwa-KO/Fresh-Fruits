@@ -7,6 +7,7 @@ import 'package:freshfruits/screens/onboarding/onboarding_first.dart';
 import 'package:freshfruits/screens/onboarding/onboarding_fourth.dart';
 import 'package:freshfruits/screens/onboarding/onboarding_second.dart';
 import 'package:freshfruits/screens/onboarding/onboarding_third.dart';
+import 'package:freshfruits/screens/single_category_screen.dart';
 import 'package:hexcolor/hexcolor.dart';
 
 void main() {
@@ -68,7 +69,7 @@ class MyApp extends StatelessWidget {
             TextSelectionThemeData(cursorColor: HexColor("#E67F1E")),
         backgroundColor: Colors.white,
       ),
-      home: const CategoriesScreen(),
+      home: const SingleCategoryScreen(),
       routes: {
         OnboardingFirst.routeName: (ctx) => const OnboardingFirst(),
         OnboardingSecond.routeName: (ctx) => const OnboardingSecond(),
@@ -78,6 +79,7 @@ class MyApp extends StatelessWidget {
         SignIn.routeName: (ctx) => const SignIn(),
         HomeScreen.routeName: (ctx) => const HomeScreen(),
         CategoriesScreen.routeName: (ctx) => const CategoriesScreen(),
+        SingleCategoryScreen.routeName: (ctx) => const SingleCategoryScreen(),
       },
     );
   }

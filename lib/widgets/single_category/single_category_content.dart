@@ -1,44 +1,38 @@
 import 'package:flutter/material.dart';
 import 'package:freshfruits/providers/deals_provider.dart';
-import 'package:freshfruits/styles/colors.dart';
 import 'package:freshfruits/styles/spacing.dart';
 import 'package:freshfruits/widgets/ui/deal_card.dart';
+import 'package:freshfruits/widgets/ui/inputs/gray_textfield.dart';
 
-class TrendingDealsList extends StatelessWidget {
+class SingleCategoryContent extends StatelessWidget {
   late List<Map<String, Object>> deals;
 
-  TrendingDealsList({super.key}) {
+  SingleCategoryContent({super.key}) {
     final dealsData = DealsProvider();
     deals = dealsData.getAllDeals();
   }
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        const SizedBox(height: 28),
-        Container(
-          padding: pagePadding,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                "Trending Deals",
-                style: Theme.of(context).textTheme.headline2,
-              ),
-              const Icon(Icons.arrow_forward_ios_rounded),
-            ],
-          ),
+    return Expanded(
+      child: Container(
+        padding: pagePadding,
+        decoration: const BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(20), topRight: Radius.circular(20)),
         ),
-        const SizedBox(height: 14),
-        Container(
-          height: 420,
-          width: double.infinity,
-          padding: pagePadding,
-          child: GridView.builder(
-            scrollDirection: Axis.horizontal,
+        child: Column(children: [
+          const SizedBox(height: 28),
+          const GrayTextfield(
+            label: "Search here",
+            icon: Icons.search,
+          ),
+          const SizedBox(height: 28),
+          Expanded(
+              child: GridView.builder(
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-              childAspectRatio: 199 / 150,
+              childAspectRatio: 150 / 199,
               crossAxisCount: 2,
               mainAxisSpacing: 20,
               crossAxisSpacing: 20,
@@ -50,9 +44,9 @@ class TrendingDealsList extends StatelessWidget {
               isFavoriteDeal: deals[index]["isFavorite"] as bool,
             ),
             itemCount: deals.length,
-          ),
-        ),
-      ],
+          )),
+        ]),
+      ),
     );
   }
 }
