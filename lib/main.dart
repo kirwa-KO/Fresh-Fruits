@@ -3,11 +3,13 @@ import 'package:freshfruits/screens/auth/create_account.dart';
 import 'package:freshfruits/screens/auth/sign_in.dart';
 import 'package:freshfruits/screens/categories_screen.dart';
 import 'package:freshfruits/screens/home_screen.dart';
+import 'package:freshfruits/screens/item_details_screen.dart';
 import 'package:freshfruits/screens/onboarding/onboarding_first.dart';
 import 'package:freshfruits/screens/onboarding/onboarding_fourth.dart';
 import 'package:freshfruits/screens/onboarding/onboarding_second.dart';
 import 'package:freshfruits/screens/onboarding/onboarding_third.dart';
 import 'package:freshfruits/screens/single_category_screen.dart';
+import 'package:freshfruits/styles/colors.dart';
 import 'package:hexcolor/hexcolor.dart';
 
 void main() {
@@ -51,6 +53,16 @@ class MyApp extends StatelessWidget {
             color: Colors.black,
             fontWeight: FontWeight.w600,
           ),
+          headline3: TextStyle(
+            fontSize: 14,
+            color: Colors.black,
+            fontWeight: FontWeight.w600,
+          ),
+          headline4: TextStyle(
+            fontSize: 24,
+            color: Colors.black,
+            fontWeight: FontWeight.w500,
+          ),
         ),
         inputDecorationTheme: InputDecorationTheme(
           enabledBorder: OutlineInputBorder(
@@ -67,9 +79,9 @@ class MyApp extends StatelessWidget {
         ),
         textSelectionTheme:
             TextSelectionThemeData(cursorColor: HexColor("#E67F1E")),
-        backgroundColor: Colors.white,
+        backgroundColor: whiteColor,
       ),
-      home: const SingleCategoryScreen(),
+      home: const ItemDetailsScreen(),
       routes: {
         OnboardingFirst.routeName: (ctx) => const OnboardingFirst(),
         OnboardingSecond.routeName: (ctx) => const OnboardingSecond(),
@@ -80,6 +92,7 @@ class MyApp extends StatelessWidget {
         HomeScreen.routeName: (ctx) => const HomeScreen(),
         CategoriesScreen.routeName: (ctx) => const CategoriesScreen(),
         SingleCategoryScreen.routeName: (ctx) => const SingleCategoryScreen(),
+        ItemDetailsScreen.routeName: (ctx) => const ItemDetailsScreen(),
       },
     );
   }

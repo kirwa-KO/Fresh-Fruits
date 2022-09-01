@@ -4,7 +4,7 @@ import 'package:confetti/confetti.dart';
 import "package:flutter/material.dart";
 import 'package:freshfruits/widgets/auth/create_account/create_account_form.dart';
 import 'package:freshfruits/widgets/auth/create_account/create_account_term_condition.dart';
-import 'package:freshfruits/widgets/layout/auth_layout.dart';
+import 'package:freshfruits/widgets/layout/image_bg_content_card_layout.dart';
 import 'package:freshfruits/widgets/ui/buttons/long_button.dart';
 
 class CreateAccount extends StatefulWidget {
@@ -104,7 +104,7 @@ class _CreateAccountState extends State<CreateAccount> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: AuthLayout(
+      body: ImageBgContentCardLayout(
         imageBg: "assets/images/auth/create-account.png",
         child: Column(
           children: [

@@ -97,6 +97,10 @@ flutter:
     - assets/images/categories/list/category6.png
     - assets/images/categories/list/category7.png
     - assets/images/categories/list/category8.png
+    - assets/images/backgrounds/item-details.png
+    - assets/images/avatars/avatar1.png
+    - assets/images/avatars/avatar2.png
+    - assets/images/avatars/avatar3.png
     
   #   - images/a_dot_ham.jpeg
 

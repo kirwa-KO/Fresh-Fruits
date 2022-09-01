@@ -6,3 +6,5 @@ const lightGrayColor = Color.fromRGBO(95, 95, 95, 1);
 const lightDarkColor = Color.fromRGBO(56, 65, 68, 1);
 const yellowColor = Color.fromRGBO(254, 197, 75, 1);
 const pinkColor = Color.fromRGBO(255, 46, 108, 1);
+const whiteColor = Color.fromRGBO(242, 242, 242, 1);
+const lightGrayColor2 = Color.fromRGBO(149, 154, 155, 1);

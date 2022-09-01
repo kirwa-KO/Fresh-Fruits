@@ -17,14 +17,16 @@ class SingleCategoryScreen extends StatelessWidget {
         elevation: 0,
         backgroundColor: Colors.white.withOpacity(0),
         actions: [
-        IconButton(
-          icon: const Icon(Icons.settings, color: Colors.white,),
-          onPressed: () {},
-        )
-      ]),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+          IconButton(
+            icon: const Icon(
+              Icons.settings,
+              color: Colors.white,
+            ),
+            onPressed: () {},
+          )
+        ],
+      ),
+      body: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
         const SingleCategoryTopSection(),
         const SizedBox(height: 32),
         SingleCategoryContent(),
