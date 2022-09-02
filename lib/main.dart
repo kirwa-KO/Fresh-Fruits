@@ -11,6 +11,7 @@ import 'package:freshfruits/screens/onboarding/onboarding_second.dart';
 import 'package:freshfruits/screens/onboarding/onboarding_third.dart';
 import 'package:freshfruits/screens/shopping_cart_screen.dart';
 import 'package:freshfruits/screens/single_category_screen.dart';
+import 'package:freshfruits/screens/thank_you_screen.dart';
 import 'package:freshfruits/styles/colors.dart';
 import 'package:hexcolor/hexcolor.dart';
 
@@ -65,6 +66,11 @@ class MyApp extends StatelessWidget {
             color: Colors.black,
             fontWeight: FontWeight.w500,
           ),
+          headline5: TextStyle(
+            fontSize: 14,
+            color: Colors.black,
+            // fontWeight: FontWeight.w600,
+          ),
         ),
         inputDecorationTheme: InputDecorationTheme(
           enabledBorder: OutlineInputBorder(
@@ -83,7 +89,7 @@ class MyApp extends StatelessWidget {
             TextSelectionThemeData(cursorColor: HexColor("#E67F1E")),
         backgroundColor: whiteColor,
       ),
-      home: const CheckoutScreen(),
+      home: const ThankYouScreen(),
       routes: {
         OnboardingFirst.routeName: (ctx) => const OnboardingFirst(),
         OnboardingSecond.routeName: (ctx) => const OnboardingSecond(),
@@ -97,6 +103,7 @@ class MyApp extends StatelessWidget {
         ItemDetailsScreen.routeName: (ctx) => const ItemDetailsScreen(),
         ShoppingCartScreen.routeName: (ctx) => const ShoppingCartScreen(),
         CheckoutScreen.routeName: (ctx) => const CheckoutScreen(),
+        ThankYouScreen.routeName: (ctx) => const ThankYouScreen(),
       },
     );
   }

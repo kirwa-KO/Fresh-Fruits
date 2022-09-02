@@ -3,7 +3,6 @@ import 'package:freshfruits/styles/colors.dart';
 import 'package:freshfruits/styles/spacing.dart';
 import 'package:freshfruits/widgets/checkout/payment_form.dart';
 import 'package:freshfruits/widgets/checkout/shpping_form.dart';
-import 'package:freshfruits/widgets/ui/inputs/outlined_grey_textfeild.dart';
 import 'package:im_stepper/stepper.dart';
 
 class CheckoutScreen extends StatefulWidget {
