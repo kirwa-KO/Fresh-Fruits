@@ -20,15 +20,19 @@ class WriteReviewScreen extends StatelessWidget {
         backgroundColor: Colors.white,
         centerTitle: true,
       ),
-      body: Padding(
-        padding: pagePadding,
-        child: Column(
-          // mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: const [
-            WriteReviewHeader(),
-            WriteReviewPickStars(),
-            WriteReviewForm(),
-          ],
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: pagePadding,
+          child: Column(
+            children: const [
+              SizedBox(height: 28),
+              WriteReviewHeader(),
+              SizedBox(height: 10),
+              WriteReviewPickStars(),
+              SizedBox(height: 28),
+              WriteReviewForm(),
+            ],
+          ),
         ),
       ),
       bottomNavigationBar: const BottomNavbar(
