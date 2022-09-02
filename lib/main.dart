@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:freshfruits/screens/auth/create_account.dart';
 import 'package:freshfruits/screens/auth/sign_in.dart';
 import 'package:freshfruits/screens/categories_screen.dart';
+import 'package:freshfruits/screens/checkout_screen.dart';
 import 'package:freshfruits/screens/home_screen.dart';
 import 'package:freshfruits/screens/item_details_screen.dart';
 import 'package:freshfruits/screens/onboarding/onboarding_first.dart';
@@ -82,7 +83,7 @@ class MyApp extends StatelessWidget {
             TextSelectionThemeData(cursorColor: HexColor("#E67F1E")),
         backgroundColor: whiteColor,
       ),
-      home: const ShoppingCartScreen(),
+      home: const CheckoutScreen(),
       routes: {
         OnboardingFirst.routeName: (ctx) => const OnboardingFirst(),
         OnboardingSecond.routeName: (ctx) => const OnboardingSecond(),
@@ -95,6 +96,7 @@ class MyApp extends StatelessWidget {
         SingleCategoryScreen.routeName: (ctx) => const SingleCategoryScreen(),
         ItemDetailsScreen.routeName: (ctx) => const ItemDetailsScreen(),
         ShoppingCartScreen.routeName: (ctx) => const ShoppingCartScreen(),
+        CheckoutScreen.routeName: (ctx) => const CheckoutScreen(),
       },
     );
   }
