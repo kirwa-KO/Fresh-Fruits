@@ -101,6 +101,10 @@ flutter:
     - assets/images/avatars/avatar1.png
     - assets/images/avatars/avatar2.png
     - assets/images/avatars/avatar3.png
+    - assets/images/orders/order1.png
+    - assets/images/orders/order2.png
+    - assets/images/orders/order3.png
+    - assets/images/orders/order4.png
     
   #   - images/a_dot_ham.jpeg
 

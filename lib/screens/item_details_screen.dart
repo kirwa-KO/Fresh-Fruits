@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:freshfruits/widgets/item_details/item_details_top_section.dart';
-import 'package:freshfruits/widgets/layout/image_bg_content_card_layout.dart';
 import 'package:freshfruits/widgets/ui/bottom_navbar.dart';
 
 class ItemDetailsScreen extends StatelessWidget {

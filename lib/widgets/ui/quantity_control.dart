@@ -4,8 +4,9 @@ import 'package:hexcolor/hexcolor.dart';
 
 class QuantityControl extends StatefulWidget {
   late int quantity;
+  final Color? iconColor;
 
-  QuantityControl({super.key, required this.quantity});
+  QuantityControl({super.key, required this.quantity, this.iconColor});
 
   @override
   State<QuantityControl> createState() => _QuantityControlState();
@@ -38,9 +39,9 @@ class _QuantityControlState extends State<QuantityControl> {
         children: [
           IconButton(
             onPressed: _decrementQuantity,
-            icon: const Icon(
+            icon: Icon(
               Icons.remove_rounded,
-              color: yellowColor,
+              color: widget.iconColor ?? yellowColor,
             ),
           ),
           Text(
@@ -52,9 +53,9 @@ class _QuantityControlState extends State<QuantityControl> {
           ),
           IconButton(
               onPressed: _incrementQuantity,
-              icon: const Icon(
+              icon: Icon(
                 Icons.add_rounded,
-                color: yellowColor,
+                color: widget.iconColor ?? yellowColor,
               )),
         ],
       ),
