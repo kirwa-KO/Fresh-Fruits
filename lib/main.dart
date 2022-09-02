@@ -13,6 +13,7 @@ import 'package:freshfruits/screens/order_tracking_screen.dart';
 import 'package:freshfruits/screens/shopping_cart_screen.dart';
 import 'package:freshfruits/screens/single_category_screen.dart';
 import 'package:freshfruits/screens/thank_you_screen.dart';
+import 'package:freshfruits/screens/write_review_screen.dart';
 import 'package:freshfruits/styles/colors.dart';
 import 'package:hexcolor/hexcolor.dart';
 
@@ -91,7 +92,7 @@ class MyApp extends StatelessWidget {
             TextSelectionThemeData(cursorColor: HexColor("#E67F1E")),
         backgroundColor: whiteColor,
       ),
-      home: const OrderTrackingScreen(),
+      home: const WriteReviewScreen(),
       routes: {
         OnboardingFirst.routeName: (ctx) => const OnboardingFirst(),
         OnboardingSecond.routeName: (ctx) => const OnboardingSecond(),
@@ -107,6 +108,7 @@ class MyApp extends StatelessWidget {
         CheckoutScreen.routeName: (ctx) => const CheckoutScreen(),
         ThankYouScreen.routeName: (ctx) => const ThankYouScreen(),
         OrderTrackingScreen.routeName: (ctx) => const OrderTrackingScreen(),
+        WriteReviewScreen.routeName: (ctx) => const WriteReviewScreen(),
       },
     );
   }
