@@ -13,7 +13,7 @@ class LongButton extends StatelessWidget {
       // margin: const EdgeInsets.symmetric(horizontal: 28),
       child: ElevatedButton(
         onPressed: onPressed != null ? onPressed : () {},
-        child: Text(label),
+        child: Text(label.toUpperCase(),),
       ),
     );
   }

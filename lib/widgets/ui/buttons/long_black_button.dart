@@ -18,7 +18,7 @@ class LongBlackButton extends StatelessWidget {
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(30)),
             ),
-        child: Text(label),
+        child: Text(label.toUpperCase()),
       ),
     );
   }

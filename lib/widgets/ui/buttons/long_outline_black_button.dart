@@ -20,7 +20,7 @@ class LongOutlineBlackButton extends StatelessWidget {
           ),
           side: const BorderSide(width: 2, color: Colors.black)
         ),
-        child: Text(label),
+        child: Text(label.toUpperCase()),
       ),
     );
   }
