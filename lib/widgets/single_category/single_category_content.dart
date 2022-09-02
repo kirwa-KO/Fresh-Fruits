@@ -6,10 +6,15 @@ import 'package:freshfruits/widgets/ui/inputs/gray_textfield.dart';
 
 class SingleCategoryContent extends StatelessWidget {
   late List<Map<String, Object>> deals;
+  final bool? isForvorites;
 
-  SingleCategoryContent({super.key}) {
+  SingleCategoryContent({super.key, this.isForvorites}) {
     final dealsData = DealsProvider();
-    deals = dealsData.getAllDeals();
+    if (isForvorites != null) {
+      deals = dealsData.getFavoritesDeals();
+    } else {
+      deals = dealsData.getAllDeals();
+    }
   }
 
   @override

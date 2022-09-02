@@ -26,7 +26,7 @@ class ShoppingCartScreen extends StatelessWidget {
         ],
       ),
       body: ShoppingCartOrdersList(),
-      bottomNavigationBar: const BottomNavbar(selectedIndex: 2),
+      bottomNavigationBar: const BottomNavbar(selectedIndex: 3),
     );
   }
 }

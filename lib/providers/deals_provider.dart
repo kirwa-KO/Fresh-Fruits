@@ -82,7 +82,7 @@ class DealsProvider {
       "name": "Banana",
       "img": "assets/images/deals/deal14.png",
       "price": 7.9,
-      "isFavorite": false,
+      "isFavorite": true,
     },
   ];
 
@@ -92,5 +92,15 @@ class DealsProvider {
 
   List<Map<String, Object>> getAllDeals() {
     return deals;
+  }
+
+  List<Map<String, Object>> getFavoritesDeals() {
+    List<Map<String, Object>> favoriteList = [];
+    for (int i = 0; i < _deals.length;i++) {
+      if (_deals[i]["isFavorite"] == true) {
+        favoriteList.add(_deals[i]);
+      }
+    }
+    return favoriteList;
   }
 }

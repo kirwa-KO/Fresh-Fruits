@@ -3,6 +3,7 @@ import 'package:freshfruits/screens/auth/create_account.dart';
 import 'package:freshfruits/screens/auth/sign_in.dart';
 import 'package:freshfruits/screens/categories_screen.dart';
 import 'package:freshfruits/screens/checkout_screen.dart';
+import 'package:freshfruits/screens/favorite_items_screen.dart';
 import 'package:freshfruits/screens/home_screen.dart';
 import 'package:freshfruits/screens/item_details_screen.dart';
 import 'package:freshfruits/screens/onboarding/onboarding_first.dart';
@@ -92,7 +93,7 @@ class MyApp extends StatelessWidget {
             TextSelectionThemeData(cursorColor: HexColor("#E67F1E")),
         backgroundColor: whiteColor,
       ),
-      home: const WriteReviewScreen(),
+      home: const FavoriteItemsScreen(),
       routes: {
         OnboardingFirst.routeName: (ctx) => const OnboardingFirst(),
         OnboardingSecond.routeName: (ctx) => const OnboardingSecond(),
@@ -109,6 +110,7 @@ class MyApp extends StatelessWidget {
         ThankYouScreen.routeName: (ctx) => const ThankYouScreen(),
         OrderTrackingScreen.routeName: (ctx) => const OrderTrackingScreen(),
         WriteReviewScreen.routeName: (ctx) => const WriteReviewScreen(),
+        FavoriteItemsScreen.routeName: (ctx) => const FavoriteItemsScreen(),
       },
     );
   }

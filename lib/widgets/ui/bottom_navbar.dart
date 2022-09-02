@@ -42,12 +42,12 @@ class _BottomNavbarState extends State<BottomNavbar> {
           label: "Cart",
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.favorite_border),
-          label: "Favorites",
+          icon: Icon(Icons.shopping_basket_outlined),
+          label: "Orders",
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.account_circle_outlined),
-          label: "Profile",
+          icon: Icon(Icons.favorite_border),
+          label: "Favorites",
         ),
       ],
       selectedItemColor: mainColor,
