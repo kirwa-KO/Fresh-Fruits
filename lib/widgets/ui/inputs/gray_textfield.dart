@@ -5,13 +5,17 @@ import 'package:hexcolor/hexcolor.dart';
 class GrayTextfield extends StatelessWidget {
   final String label;
   final IconData? icon;
-  const GrayTextfield({super.key, required this.label, this.icon});
+  final bool? isForFavorites;
+  const GrayTextfield({super.key, required this.label, this.icon, this.isForFavorites});
 
   @override
   Widget build(BuildContext context) {
     return TextField(
       decoration: InputDecoration(
-        suffixIcon: Icon(icon, color: HexColor("#898989"),),
+        suffixIcon: Icon(
+          icon,
+          color: HexColor("#898989"),
+        ),
         labelText: label,
         filled: true,
         fillColor: HexColor("#F0F0F0"),
@@ -21,7 +25,7 @@ class GrayTextfield extends StatelessWidget {
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(18),
-          borderSide: const BorderSide(color: yellowColor, width: 2),
+          borderSide: BorderSide(color: isForFavorites == null ? yellowColor : pinkColor, width: 2),
         ),
       ),
       cursorColor: yellowColor,

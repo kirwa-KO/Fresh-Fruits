@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:freshfruits/providers/deals_provider.dart';
+import 'package:freshfruits/screens/single_category_screen.dart';
 import 'package:freshfruits/styles/colors.dart';
 import 'package:freshfruits/styles/spacing.dart';
 import 'package:freshfruits/widgets/ui/deal_card.dart';
@@ -43,11 +44,17 @@ class TrendingDealsList extends StatelessWidget {
               mainAxisSpacing: 20,
               crossAxisSpacing: 20,
             ),
-            itemBuilder: (ctx, index) => DealCard(
-              dealImage: deals[index]["img"] as String,
-              dealName: deals[index]["name"] as String,
-              dealprice: deals[index]["price"] as double,
-              isFavoriteDeal: deals[index]["isFavorite"] as bool,
+            itemBuilder: (ctx, index) => GestureDetector(
+              onTap: () {
+                Navigator.of(context).pushNamed(SingleCategoryScreen.routeName);
+              },
+              child: DealCard(
+                key: UniqueKey(),
+                dealImage: deals[index]["img"] as String,
+                dealName: deals[index]["name"] as String,
+                dealprice: deals[index]["price"] as double,
+                isFavoriteDeal: deals[index]["isFavorite"] as bool,
+              ),
             ),
             itemCount: deals.length,
           ),

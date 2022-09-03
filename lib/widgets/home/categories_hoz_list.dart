@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:freshfruits/providers/categories_provider.dart';
+import 'package:freshfruits/screens/categories_screen.dart';
 import 'package:freshfruits/styles/spacing.dart';
 
 class CategoriesHozList extends StatelessWidget {
@@ -10,36 +11,45 @@ class CategoriesHozList extends StatelessWidget {
     categories = categoriesData.getAllCategories();
   }
 
+  void _pushedPage(BuildContext ctx) {
+    Navigator.of(ctx).pushNamed(CategoriesScreen.routeName);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Column(
-        children: [
-          const SizedBox(height: 28),
-          Container(
-            padding: pagePadding,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  "Categories",
-                  style: Theme.of(context).textTheme.headline2,
-                ),
-                const Icon(Icons.arrow_forward_ios_rounded)
-              ],
-            ),
+      children: [
+        const SizedBox(height: 28),
+        Container(
+          padding: pagePadding,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                "Categories",
+                style: Theme.of(context).textTheme.headline2,
+              ),
+              const Icon(Icons.arrow_forward_ios_rounded)
+            ],
           ),
-          const SizedBox(height: 14),
-          Container(
-            height: 73,
-            child: ListView.builder(
-              clipBehavior: Clip.none,
-              scrollDirection: Axis.horizontal,
-              itemBuilder: (ctx, index) =>
-                  CategoryCard(categoryImage: categories[index]),
-              itemCount: categories.length,
+        ),
+        const SizedBox(height: 14),
+        Container(
+          height: 73,
+          child: ListView.builder(
+            clipBehavior: Clip.none,
+            scrollDirection: Axis.horizontal,
+            itemBuilder: (ctx, index) => GestureDetector(
+              onTap: () {
+                _pushedPage(context);
+              },
+              child: CategoryCard(
+                  key: UniqueKey(), categoryImage: categories[index]),
             ),
-          )
-        ],
+            itemCount: categories.length,
+          ),
+        )
+      ],
     );
   }
 }

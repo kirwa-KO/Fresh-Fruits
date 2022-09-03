@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:freshfruits/screens/auth/create_account.dart';
+import 'package:freshfruits/screens/auth/sign_in.dart';
 import 'package:freshfruits/widgets/Onboarding/step_content.dart';
 import 'package:freshfruits/widgets/ui/buttons/long_black_button.dart';
 import 'package:freshfruits/widgets/ui/buttons/long_outline_black_button.dart';
@@ -20,14 +22,21 @@ class OnboardingFourth extends StatelessWidget {
               Image.asset("assets/images/onboarding/step3.png"),
               const SizedBox(height: 40),
               const StepContent(
-                  stepNumber: 2,
+                  stepNumber: 3,
                   header: "Fast and responsibily delivery by our courir ",
                   description:
                       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"),
               const SizedBox(height: 40),
-              const LongBlackButton(label: "Create an account"),
+              LongBlackButton(
+                  label: "Create an account",
+                  onPressed: () {
+                    Navigator.of(context).pushReplacementNamed(CreateAccount.routeName);
+                  }),
               const SizedBox(height: 16),
-              const LongOutlineBlackButton(label: "Login"),
+              LongOutlineBlackButton(label: "Login",
+                  onPressed: () {
+                    Navigator.of(context).pushReplacementNamed(SignIn.routeName);
+                  }),
               const SizedBox(height: 40)
             ],
           )),

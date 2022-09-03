@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:freshfruits/screens/write_review_screen.dart';
 import 'package:freshfruits/styles/spacing.dart';
 import 'package:freshfruits/widgets/order_tracking/order_tracking_stepper.dart';
 import 'package:freshfruits/widgets/ui/bottom_navbar.dart';
@@ -26,7 +27,11 @@ class OrderTrackingScreen extends StatelessWidget {
             const SizedBox(height: 28),
             Image.asset("assets/images/orders/order-tracking.png"),
             const OrderTrackingStepper(),
-            const LongButton(label: "Submit review"),
+            LongButton(
+                label: "Submit review",
+                onPressed: () {
+                  Navigator.of(context).pushNamed(WriteReviewScreen.routeName);
+                }),
             const SizedBox(height: 28)
           ],
         ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:freshfruits/screens/single_category_screen.dart';
 import 'package:freshfruits/styles/spacing.dart';
 import 'package:freshfruits/widgets/home/categories_hoz_list.dart';
 import 'package:freshfruits/widgets/home/recepiecs_horz_list.dart';
@@ -25,7 +26,11 @@ class HomeScreen extends StatelessWidget {
         const SizedBox(height: 28),
         Container(
           padding: pagePadding,
-          child: const LongBlackButton(label: "More"),
+          child: LongBlackButton(
+              label: "More",
+              onPressed: () {
+                Navigator.of(context).pushNamed(SingleCategoryScreen.routeName);
+              }),
         ),
         const SizedBox(height: 28),
       ])),

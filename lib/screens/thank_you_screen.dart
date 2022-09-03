@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:freshfruits/screens/order_tracking_screen.dart';
 import 'package:freshfruits/styles/spacing.dart';
 import 'package:freshfruits/widgets/ui/bottom_navbar.dart';
 import 'package:freshfruits/widgets/ui/buttons/long_button.dart';
@@ -37,7 +38,11 @@ class ThankYouScreen extends StatelessWidget {
                 ),
               ],
             ),
-            const LongButton(label: "Track your order"),
+            LongButton(
+                label: "Track your order",
+                onPressed: () {
+                  Navigator.of(context).pushNamed(OrderTrackingScreen.routeName);
+                }),
           ],
         ),
       ),

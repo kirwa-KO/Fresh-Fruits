@@ -90,14 +90,14 @@ flutter:
     - assets/images/deals/deal12.png
     - assets/images/deals/deal13.png
     - assets/images/deals/deal14.png
-    - assets/images/categories/list/category1.png
-    - assets/images/categories/list/category2.png
-    - assets/images/categories/list/category3.png
-    - assets/images/categories/list/category4.png
-    - assets/images/categories/list/category5.png
-    - assets/images/categories/list/category6.png
-    - assets/images/categories/list/category7.png
-    - assets/images/categories/list/category8.png
+    - assets/images/categories/list/category_list1.png
+    - assets/images/categories/list/category_list2.png
+    - assets/images/categories/list/category_list3.png
+    - assets/images/categories/list/category_list4.png
+    - assets/images/categories/list/category_list5.png
+    - assets/images/categories/list/category_list6.png
+    - assets/images/categories/list/category_list7.png
+    - assets/images/categories/list/category_list8.png
     - assets/images/backgrounds/item-details.png
     - assets/images/avatars/avatar1.png
     - assets/images/avatars/avatar2.png

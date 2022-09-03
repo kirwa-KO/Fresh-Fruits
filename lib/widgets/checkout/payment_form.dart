@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:freshfruits/screens/thank_you_screen.dart';
 import 'package:freshfruits/styles/colors.dart';
 import 'package:freshfruits/widgets/checkout/shpping_form.dart';
 import 'package:freshfruits/widgets/ui/buttons/long_button.dart';
@@ -35,7 +36,11 @@ class PaymentForm extends StatelessWidget {
         const SizedBox(height: 8),
         const CheckoxFeild(label: "Save credit card details"),
         const SizedBox(height: 8),
-        const LongButton(label: "Confirm ORDER"),
+        LongButton(
+            label: "Confirm ORDER",
+            onPressed: () {
+              Navigator.of(context).pushNamed(ThankYouScreen.routeName);
+            }),
         const SizedBox(height: 32),
       ]),
     );

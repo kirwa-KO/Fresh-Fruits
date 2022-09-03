@@ -8,28 +8,40 @@ class ImageBgContentCardLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        image: DecorationImage(
-            image: AssetImage(imageBg),
-            fit: BoxFit.contain,
-            alignment: Alignment.topLeft),
-      ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.end,
-        children: [
-          Container(
-            width: double.infinity,
-            padding: const EdgeInsets.symmetric(horizontal: 28, vertical: 28),
-            decoration: const BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(20), topRight: Radius.circular(20)),
+    // double heightMargin = MediaQuery.of(context).size.height / 4;
+    return CustomScrollView(
+      slivers: [
+        SliverFillRemaining(
+          hasScrollBody: false,
+          child: Container(
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                  image: AssetImage(imageBg),
+                  fit: BoxFit.contain,
+                  alignment: Alignment.topLeft),
             ),
-            child: child,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              mainAxisSize: MainAxisSize.max,
+              children: [
+                Container(
+                  // margin: EdgeInsets.only(top: heightMargin),
+                  width: double.infinity,
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 28, vertical: 28),
+                  decoration: const BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(20),
+                        topRight: Radius.circular(20)),
+                  ),
+                  child: child,
+                ),
+              ],
+            ),
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }

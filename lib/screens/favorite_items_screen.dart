@@ -14,6 +14,9 @@ class FavoriteItemsScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: pinkColor,
       appBar: AppBar(
+        iconTheme: const IconThemeData(
+          color: Colors.white,
+        ),
         elevation: 0,
         backgroundColor: Colors.white.withOpacity(0),
         actions: [
@@ -27,9 +30,10 @@ class FavoriteItemsScreen extends StatelessWidget {
         ],
       ),
       body: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-        const SingleCategoryTopSection(itemsNumber: "6 items", title: "Favorite Items"),
+        const SingleCategoryTopSection(
+            itemsNumber: "6 items", title: "Favorite Items"),
         const SizedBox(height: 32),
-        SingleCategoryContent(isForvorites: true),
+        SingleCategoryContent(isForFavorites: true),
       ]),
       bottomNavigationBar: const BottomNavbar(
         selectedIndex: 4,

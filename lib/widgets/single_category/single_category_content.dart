@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:freshfruits/providers/deals_provider.dart';
+import 'package:freshfruits/screens/item_details_screen.dart';
 import 'package:freshfruits/styles/spacing.dart';
 import 'package:freshfruits/widgets/ui/deal_card.dart';
 import 'package:freshfruits/widgets/ui/inputs/gray_textfield.dart';
 
 class SingleCategoryContent extends StatelessWidget {
   late List<Map<String, Object>> deals;
-  final bool? isForvorites;
+  final bool? isForFavorites;
 
-  SingleCategoryContent({super.key, this.isForvorites}) {
+  SingleCategoryContent({super.key, this.isForFavorites}) {
     final dealsData = DealsProvider();
-    if (isForvorites != null) {
+    if (isForFavorites != null) {
       deals = dealsData.getFavoritesDeals();
     } else {
       deals = dealsData.getAllDeals();
@@ -29,9 +30,10 @@ class SingleCategoryContent extends StatelessWidget {
         ),
         child: Column(children: [
           const SizedBox(height: 28),
-          const GrayTextfield(
+          GrayTextfield(
             label: "Search here",
             icon: Icons.search,
+            isForFavorites: isForFavorites,
           ),
           const SizedBox(height: 28),
           Expanded(
@@ -42,11 +44,17 @@ class SingleCategoryContent extends StatelessWidget {
               mainAxisSpacing: 20,
               crossAxisSpacing: 20,
             ),
-            itemBuilder: (ctx, index) => DealCard(
-              dealImage: deals[index]["img"] as String,
-              dealName: deals[index]["name"] as String,
-              dealprice: deals[index]["price"] as double,
-              isFavoriteDeal: deals[index]["isFavorite"] as bool,
+            itemBuilder: (ctx, index) => GestureDetector(
+              onTap: () {
+                Navigator.of(context).pushNamed(ItemDetailsScreen.routeName);
+              },
+              child: DealCard(
+                key: UniqueKey(),
+                dealImage: deals[index]["img"] as String,
+                dealName: deals[index]["name"] as String,
+                dealprice: deals[index]["price"] as double,
+                isFavoriteDeal: deals[index]["isFavorite"] as bool,
+              ),
             ),
             itemCount: deals.length,
           )),

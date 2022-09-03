@@ -1,7 +1,8 @@
 import 'dart:math';
-
 import 'package:confetti/confetti.dart';
 import "package:flutter/material.dart";
+import 'package:freshfruits/screens/auth/sign_in.dart';
+import 'package:freshfruits/styles/colors.dart';
 import 'package:freshfruits/widgets/auth/create_account/create_account_form.dart';
 import 'package:freshfruits/widgets/auth/create_account/create_account_term_condition.dart';
 import 'package:freshfruits/widgets/layout/image_bg_content_card_layout.dart';
@@ -41,15 +42,14 @@ class _CreateAccountState extends State<CreateAccount> {
     return showDialog(
         context: context,
         builder: (BuildContext ctx) => AlertDialog(
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(32)),
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(32)),
               title: const Text(
                 "CONGRATULATIONS",
                 style: TextStyle(color: Colors.green),
                 textAlign: TextAlign.center,
               ),
-              content: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
+              content: Column(mainAxisSize: MainAxisSize.min, children: [
                 const Text("Account Created Successfully"),
                 const SizedBox(height: 28),
                 ConfettiWidget(
@@ -67,10 +67,17 @@ class _CreateAccountState extends State<CreateAccount> {
                   ], // manually specify the colors to be used
                   createParticlePath: drawStar, // define a custom shape/path.
                 ),
-                const Icon(Icons.handshake_outlined, size: 80, color: Colors.green,),
+                const Icon(
+                  Icons.handshake_outlined,
+                  size: 80,
+                  color: Colors.green,
+                ),
                 const SizedBox(height: 28),
-                const LongButton(
+                LongButton(
                   label: "SIGN IN",
+                  onPressed: () {
+                    Navigator.of(context).pushReplacementNamed(SignIn.routeName);
+                  },
                 )
               ]),
             ));
@@ -96,7 +103,7 @@ class _CreateAccountState extends State<CreateAccount> {
       path.lineTo(halfWidth + internalRadius * cos(step + halfDegreesPerStep),
           halfWidth + internalRadius * sin(step + halfDegreesPerStep));
     }
-    
+
     path.close();
     return path;
   }
@@ -117,6 +124,24 @@ class _CreateAccountState extends State<CreateAccount> {
             LongButton(
               label: "Create an account",
               onPressed: () => _openCongratDialog(context),
+            ),
+            const SizedBox(height: 12),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Text("Have an account?"),
+                const SizedBox(width: 8),
+                GestureDetector(
+                    onTap: () {
+                      Navigator.of(context)
+                          .pushReplacementNamed(SignIn.routeName);
+                    },
+                    child: const Text(
+                      "Sign in",
+                      style: TextStyle(
+                          color: mainColor, fontWeight: FontWeight.bold),
+                    )),
+              ],
             )
           ],
         ),

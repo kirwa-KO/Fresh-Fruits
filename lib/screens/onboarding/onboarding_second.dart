@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:freshfruits/screens/onboarding/onboarding_third.dart';
 import 'package:freshfruits/widgets/Onboarding/step_content.dart';
 import 'package:freshfruits/widgets/ui/buttons/long_button.dart';
 
@@ -25,7 +26,11 @@ class OnboardingSecond extends StatelessWidget {
                   description:
                       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"),
               const SizedBox(height: 40),
-              const LongButton(label: "NEXT"),
+              LongButton(
+                  label: "NEXT",
+                  onPressed: () {
+                    Navigator.of(context).pushReplacementNamed(OnboardingThird.routeName);
+                  }),
               const SizedBox(height: 40)
             ],
           )),

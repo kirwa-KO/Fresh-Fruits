@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:freshfruits/providers/categories_provider.dart';
+import 'package:freshfruits/screens/single_category_screen.dart';
 import 'package:freshfruits/styles/colors.dart';
 
 class CategoriesList extends StatelessWidget {
@@ -23,10 +24,15 @@ class CategoriesList extends StatelessWidget {
           mainAxisSpacing: 24,
           crossAxisSpacing: 16,
         ),
-        itemBuilder: (ctx, index) => CategoriesListCard(
-          categoryImage: categoriesList[index]["img"] as String,
-          categoryName: categoriesList[index]["name"] as String,
-          categoryQuantity: categoriesList[index]["quantity"] as int,
+        itemBuilder: (ctx, index) => GestureDetector(
+          onTap: () {
+            Navigator.of(context).pushNamed(SingleCategoryScreen.routeName);
+          },
+          child: CategoriesListCard(
+            categoryImage: categoriesList[index]["img"] as String,
+            categoryName: categoriesList[index]["name"] as String,
+            categoryQuantity: categoriesList[index]["quantity"] as int,
+          ),
         ),
         itemCount: categoriesList.length,
       ),

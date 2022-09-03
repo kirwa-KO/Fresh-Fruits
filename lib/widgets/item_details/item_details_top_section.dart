@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:freshfruits/screens/shopping_cart_screen.dart';
 import 'package:freshfruits/styles/colors.dart';
 import 'package:freshfruits/widgets/ui/buttons/long_button.dart';
 import 'package:freshfruits/widgets/ui/quantity_control.dart';
@@ -21,7 +22,12 @@ class ItemDetailsTopSection extends StatelessWidget {
         const SizedBox(height: 28),
         const InfoTab(),
         const SizedBox(height: 28),
-        const LongButton(label: "Add to cart \$70.89")
+        LongButton(
+          label: "Add to cart \$70.89",
+          onPressed: () {
+            Navigator.of(context).pushNamed(ShoppingCartScreen.routeName);
+          },
+        )
       ],
     );
   }
@@ -80,7 +86,7 @@ class ItemPriceQuantity extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children:  [
+      children: [
         const Text(
           "\$4.9",
           style: TextStyle(

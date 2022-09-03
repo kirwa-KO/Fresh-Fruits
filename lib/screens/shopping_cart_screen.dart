@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:freshfruits/screens/checkout_screen.dart';
 import 'package:freshfruits/styles/colors.dart';
 import 'package:freshfruits/widgets/shopping_cart/shopping_cart_orders_list.dart';
 import 'package:freshfruits/widgets/ui/bottom_navbar.dart';
@@ -18,7 +19,9 @@ class ShoppingCartScreen extends StatelessWidget {
         title: const Text("Shopping cart"),
         actions: [
           TextButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).pushNamed(CheckoutScreen.routeName);
+              },
               child: const Text(
                 "Place Order",
                 style: TextStyle(color: mainColor),

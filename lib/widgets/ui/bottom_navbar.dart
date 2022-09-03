@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:freshfruits/screens/categories_screen.dart';
+import 'package:freshfruits/screens/favorite_items_screen.dart';
+import 'package:freshfruits/screens/home_screen.dart';
+import 'package:freshfruits/screens/item_details_screen.dart';
+import 'package:freshfruits/screens/shopping_cart_screen.dart';
 import 'package:freshfruits/styles/colors.dart';
 
 class BottomNavbar extends StatefulWidget {
@@ -20,6 +25,7 @@ class _BottomNavbarState extends State<BottomNavbar> {
   }
 
   void _onItemTapped(int index) {
+    Navigator.of(context).pushNamed(navbarPages[index]);
     setState(() {
       _selectedIndex = index;
     });
@@ -58,3 +64,11 @@ class _BottomNavbarState extends State<BottomNavbar> {
     );
   }
 }
+
+const List<String> navbarPages = [
+  HomeScreen.routeName,
+  CategoriesScreen.routeName,
+  ItemDetailsScreen.routeName,
+  ShoppingCartScreen.routeName,
+  FavoriteItemsScreen.routeName,
+];

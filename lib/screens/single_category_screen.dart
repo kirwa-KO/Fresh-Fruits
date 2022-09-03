@@ -14,6 +14,9 @@ class SingleCategoryScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: yellowColor,
       appBar: AppBar(
+        iconTheme: const IconThemeData(
+          color: Colors.white,
+        ),
         elevation: 0,
         backgroundColor: Colors.white.withOpacity(0),
         actions: [

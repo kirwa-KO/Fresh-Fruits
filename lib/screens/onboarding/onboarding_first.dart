@@ -1,10 +1,26 @@
+import 'dart:async';
+
 import "package:flutter/material.dart";
+import 'package:freshfruits/screens/onboarding/onboarding_second.dart';
 import 'package:hexcolor/hexcolor.dart';
 
-class OnboardingFirst extends StatelessWidget {
+class OnboardingFirst extends StatefulWidget {
   static const String routeName = "/onboarding_first";
 
   const OnboardingFirst({super.key});
+
+  @override
+  State<OnboardingFirst> createState() => _OnboardingFirstState();
+}
+
+class _OnboardingFirstState extends State<OnboardingFirst> {
+  @override
+  void initState() {
+    Timer(const Duration(milliseconds: 800), () {
+      Navigator.of(context).pushReplacementNamed(OnboardingSecond.routeName);
+    });
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {

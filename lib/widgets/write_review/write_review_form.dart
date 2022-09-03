@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:freshfruits/screens/home_screen.dart';
 import 'package:freshfruits/widgets/ui/buttons/long_button.dart';
 import 'package:freshfruits/widgets/ui/inputs/multilines_textfeild.dart';
 
@@ -10,11 +11,19 @@ class WriteReviewForm extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text("Let us know what you think", style: Theme.of(context).textTheme.headline1,),
+        Text(
+          "Let us know what you think",
+          style: Theme.of(context).textTheme.headline1,
+        ),
         const SizedBox(height: 10),
         const MultilinesTextfeild(hint: "Write your review here"),
         const SizedBox(height: 18),
-        const LongButton(label: "Done")
+        LongButton(
+          label: "Done",
+          onPressed: () {
+            Navigator.of(context).pushReplacementNamed(HomeScreen.routeName);
+          },
+        )
       ],
     );
   }
