@@ -44,7 +44,7 @@ flutter run
 [Figma design](https://www.figma.com/file/zTIlHNP6TsRotmFFOULANg/Fresh-Fruits?node-id=1422%3A381) made by [Md Rafatul Islam](https://dribbble.com/mrirafat)
 
 ## License
-discord-clone is licensed under MIT license. View license. [LICENSE](https://github.com/kirwa-KO/Fresh-Fruits/blob/main/LICENSE)
+Fresh Fruits is licensed under MIT license. View license. [LICENSE](https://github.com/kirwa-KO/Fresh-Fruits/blob/main/LICENSE)
 
 ## Support
 #### This app costs me time to make and maintain every time.
