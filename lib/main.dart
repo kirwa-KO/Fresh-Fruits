@@ -93,7 +93,7 @@ class MyApp extends StatelessWidget {
             TextSelectionThemeData(cursorColor: HexColor("#E67F1E")),
         backgroundColor: whiteColor,
       ),
-      home: const OnboardingFirst(),
+      home: const CheckoutScreen(),
       routes: {
         OnboardingFirst.routeName: (ctx) => const OnboardingFirst(),
         OnboardingSecond.routeName: (ctx) => const OnboardingSecond(),

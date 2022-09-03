@@ -13,6 +13,7 @@ class OutlinedGreyTextfeild extends StatelessWidget {
         decoration: InputDecoration(
           hintText: hint,
       labelText: label,
+      alignLabelWithHint: true,
       enabledBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(30),
         borderSide: BorderSide(color: HexColor("#CACACA"), width: 1),

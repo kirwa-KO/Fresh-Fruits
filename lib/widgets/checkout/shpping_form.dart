@@ -21,24 +21,27 @@ class ShppingForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      child: Column(children: [
-        const OutlinedGreyTextfeild(label: "Full Name", hint: "Imran Baali"),
-        seperator(),
-        const OutlinedGreyTextfeild(
-            label: "Email Address", hint: "imran.baali19@gmail.com"),
-        seperator(),
-        const OutlinedGreyTextfeild(label: "Phone", hint: "+880 1617202070"),
-        seperator(),
-        const OutlinedGreyTextfeild(
-            label: "Address", hint: "Type your home address"),
-        seperator(),
-        const DropdownSelectFeild(options: countriesList),
-        const SizedBox(height: 8),
-        const CheckoxFeild(label: "Save shipping address"),
-        const SizedBox(height: 8),
-        LongButton(label: "NEXT", onPressed: nextButton),
-        const SizedBox(height: 32),
-      ]),
+      child: Column(
+        children: [
+          const SizedBox(height: 8),
+          const OutlinedGreyTextfeild(label: "Full Name", hint: "Imran Baali"),
+          seperator(),
+          const OutlinedGreyTextfeild(
+              label: "Email Address", hint: "imran.baali19@gmail.com"),
+          seperator(),
+          const OutlinedGreyTextfeild(label: "Phone", hint: "+880 1617202070"),
+          seperator(),
+          const OutlinedGreyTextfeild(
+              label: "Address", hint: "Type your home address"),
+          seperator(),
+          const DropdownSelectFeild(options: countriesList),
+          const SizedBox(height: 8),
+          const CheckoxFeild(label: "Save shipping address"),
+          const SizedBox(height: 8),
+          LongButton(label: "NEXT", onPressed: nextButton),
+          const SizedBox(height: 32),
+        ],
+      ),
     );
   }
 
