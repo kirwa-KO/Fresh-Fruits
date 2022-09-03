@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-Grocery Mobile App Minimalist, Simple, Fast and Easy to use. eCommerce based Grocery mobile Application
+Grocery Mobile App Minimalist, Simple, Fast and Easy to use.<br/> eCommerce based Grocery mobile Application
 </p>
 
 ![](https://github.com/kirwa-KO/Fresh-Fruits/blob/main/readme/cover.jpeg)
