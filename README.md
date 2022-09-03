@@ -14,17 +14,15 @@ Grocery Mobile App Minimalist, Simple, Fast and Easy to use. eCommerce based Gro
 [![Dart](https://img.shields.io/badge/Dart-20232A?style=flat&logo=dart&logoColor=00B4AB&link=https://github.com/arihant-jain-09)](https://github.com/kirwa-KO)
 [![Flutter](https://img.shields.io/badge/Flutter-20232A?style=flat&logo=flutter&logoColor=60C9F9&link=https://github.com/arihant-jain-09)](https://github.com/kirwa-KO)
 
-## Screenshots
-
-- On Boarding
+## On Boarding
 ![](https://github.com/kirwa-KO/Fresh-Fruits/blob/main/readme/screen-shot1.jpeg)
 
 
--  Ordering
+## Ordering
 ![](https://github.com/kirwa-KO/Fresh-Fruits/blob/main/readme/screen-shot2.jpeg)
 
 
-- Authentication
+## Authentication
 ![](https://github.com/kirwa-KO/Fresh-Fruits/blob/main/readme/screen-shot3.jpeg)
 
 ## All app screens
