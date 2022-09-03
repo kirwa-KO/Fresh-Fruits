@@ -25,7 +25,7 @@ class ItemDetailsTopSection extends StatelessWidget {
         LongButton(
           label: "Add to cart \$70.89",
           onPressed: () {
-            Navigator.of(context).pushNamed(ShoppingCartScreen.routeName);
+            Navigator.of(context).pushReplacementNamed(ShoppingCartScreen.routeName);
           },
         )
       ],

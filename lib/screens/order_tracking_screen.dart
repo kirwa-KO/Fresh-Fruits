@@ -21,19 +21,21 @@ class OrderTrackingScreen extends StatelessWidget {
       ),
       body: Padding(
         padding: pagePadding,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            const SizedBox(height: 28),
-            Image.asset("assets/images/orders/order-tracking.png"),
-            const OrderTrackingStepper(),
-            LongButton(
-                label: "Submit review",
-                onPressed: () {
-                  Navigator.of(context).pushNamed(WriteReviewScreen.routeName);
-                }),
-            const SizedBox(height: 28)
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              const SizedBox(height: 28),
+              Image.asset("assets/images/orders/order-tracking.png"),
+              const OrderTrackingStepper(),
+              LongButton(
+                  label: "Submit review",
+                  onPressed: () {
+                    Navigator.of(context).pushNamed(WriteReviewScreen.routeName);
+                  }),
+              const SizedBox(height: 28)
+            ],
+          ),
         ),
       ),
       bottomNavigationBar: const BottomNavbar(

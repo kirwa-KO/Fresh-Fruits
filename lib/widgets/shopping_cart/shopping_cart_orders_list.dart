@@ -133,7 +133,7 @@ class OrderImageAndPrice extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 93,
+      width: 85,
       // height: 113,
       decoration: BoxDecoration(
           image: DecorationImage(

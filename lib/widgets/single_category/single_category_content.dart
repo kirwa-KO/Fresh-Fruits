@@ -46,7 +46,7 @@ class SingleCategoryContent extends StatelessWidget {
             ),
             itemBuilder: (ctx, index) => GestureDetector(
               onTap: () {
-                Navigator.of(context).pushNamed(ItemDetailsScreen.routeName);
+                Navigator.of(context).pushReplacementNamed(ItemDetailsScreen.routeName);
               },
               child: DealCard(
                 key: UniqueKey(),

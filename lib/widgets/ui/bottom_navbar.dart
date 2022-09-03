@@ -25,7 +25,7 @@ class _BottomNavbarState extends State<BottomNavbar> {
   }
 
   void _onItemTapped(int index) {
-    Navigator.of(context).pushNamed(navbarPages[index]);
+    Navigator.of(context).pushReplacementNamed(navbarPages[index]);
     setState(() {
       _selectedIndex = index;
     });

@@ -12,7 +12,7 @@ class CategoriesHozList extends StatelessWidget {
   }
 
   void _pushedPage(BuildContext ctx) {
-    Navigator.of(ctx).pushNamed(CategoriesScreen.routeName);
+    Navigator.of(ctx).pushReplacementNamed(CategoriesScreen.routeName);
   }
 
   @override

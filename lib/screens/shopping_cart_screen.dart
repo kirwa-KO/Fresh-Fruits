@@ -17,6 +17,7 @@ class ShoppingCartScreen extends StatelessWidget {
         elevation: 0,
         backgroundColor: HexColor("#fff"),
         title: const Text("Shopping cart"),
+        centerTitle: false,
         actions: [
           TextButton(
               onPressed: () {
